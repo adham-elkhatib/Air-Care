@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="$FLUTTER_BASE_HREF">
+
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="A new Flutter project." name="description">
+
+    <!-- iOS meta tags & icons -->
+    <meta content="yes" name="mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="air_care" name="apple-mobile-web-app-title">
+    <link href="icons/Icon-192.png" rel="apple-touch-icon">
+
+    <!-- Favicon -->
+    <link href="favicon.png" rel="icon" type="image/png"/>
+
+    <title>air_care</title>
+    <link href="manifest.json" rel="manifest">
+
+    <!-- ✅ Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging-compat.js"></script>
+
+    <!-- ✅ Firebase Config -->
+    <script>
+        const firebaseConfig = {
+          apiKey: "AIzaSyA3gPHrrKDMAhXwsr3C2nf3Y54s9YMlq4k",
+          authDomain: "aircare-bdc4d.firebaseapp.com",
+          projectId: "aircare-bdc4d",
+          storageBucket: "aircare-bdc4d.firebasestorage.app",
+          messagingSenderId: "868590221126",
+          appId: "1:868590221126:web:736cba6c0c7ae4206a1747"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <!-- ✅ Flutter bootstrap -->
+    <script async src="flutter_bootstrap.js"></script>
+</head>
+<body>
+</body>
+
+<!-- ✅ Register Service Worker -->
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/firebase-messaging-sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered with scope:', registration.scope);
+        }).catch((error) => {
+          console.error('Service Worker registration failed:', error);
+        });
+    }
+</script>
+</html>

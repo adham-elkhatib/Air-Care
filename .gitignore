@@ -1,0 +1,44 @@
+# ─── General ────────────────────────────────
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+
+# ─── Environment & Secrets ──────────────────
+*.env
+android/app/google-services.json
+lib/core/Services/Firebase/src/firebase_options.dart
+
+# ─── IDEs & Editors ─────────────────────────
+.idea/
+*.iml
+*.ipr
+*.iws
+.atom/
+.history
+.svn/
+.swiftpm/
+/.vscode/  # Uncomment if you don't want to share VSCode configs
+
+# ─── Flutter/Dart ───────────────────────────
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+build/
+**/doc/api/
+**/ios/Flutter/.last_build_id
+
+# ─── Android Build Artifacts ────────────────
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# ─── Symbolication / Obfuscation ────────────
+app.*.symbols
+app.*.map.json
+
+# ─── Migration Tools ────────────────────────
+migrate_working_dir/
